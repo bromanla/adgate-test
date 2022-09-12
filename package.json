@@ -1,0 +1,39 @@
+{
+  "name": "adgate-test",
+  "version": "0.0.1",
+  "description": "simplify interaction",
+  "author": "Roman <bromanla.json@gmail.com>",
+  "private": true,
+  "scripts": {
+    "prebuild": "rimraf build",
+    "build": "tsc --build",
+    "start": "ts-node -r tsconfig-paths/register ./src/index.ts",
+    "start:prod": "cross-env TS_NODE_BASEURL=./build node -r tsconfig-paths/register ./build/index.js",
+    "start:dev": "nodemon ./src/index.ts"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.2",
+    "pg": "^8.8.0",
+    "reflect-metadata": "^0.1.13",
+    "rimraf": "^3.0.2",
+    "telegraf": "^4.9.1",
+    "telegraf-throttler": "^0.6.0",
+    "tsconfig-paths": "^4.1.0",
+    "typeorm": "^0.3.9",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.16",
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@typescript-eslint/parser": "^5.36.2",
+    "eslint": "^8.23.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "nodemon": "^2.0.19",
+    "prettier": "^2.7.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.3"
+  }
+}

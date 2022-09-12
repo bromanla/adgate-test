@@ -1,0 +1,8 @@
+{
+  "events": {
+    "start": "node -e console.clear()"
+  },
+  "watch": ["src"],
+  "exec": "ts-node -r tsconfig-paths/register ./src/index.ts",
+  "ext": "ts"
+}

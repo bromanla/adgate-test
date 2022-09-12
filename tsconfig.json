@@ -1,0 +1,19 @@
+/* Visit https://aka.ms/tsconfig.json to read more about this file */
+
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "removeComments": true,
+    "target": "ES2022",
+    "outDir": "./build",
+    "baseUrl": "./src",
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+    "esModuleInterop": true
+  }
+}
