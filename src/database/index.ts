@@ -10,8 +10,8 @@ export const Database = new DataSource({
   username: config.postgres.username,
   password: config.postgres.password,
   database: config.postgres.database,
-  synchronize: config.debug,
-  logging: false,
+  synchronize: true,
+  logging: config.debug,
   entities: [User],
 });
 
