@@ -19,7 +19,7 @@ export const mailScene = (bot: Telegraf<Scenes.WizardContext>) => {
       await ctx.scene.leave();
       await ctx.reply(MessageText.Main, startKeyboard);
     })
-    .use((ctx) => ctx.reply('Подтвердите действие'));
+    .use((ctx) => ctx.reply(MessageText.MailConfirmError));
 
   messageHandler
     .on('text', async (ctx) => {
@@ -33,7 +33,7 @@ export const mailScene = (bot: Telegraf<Scenes.WizardContext>) => {
       );
       await ctx.scene.leave();
     })
-    .use((ctx) => ctx.reply('Введите текст!'));
+    .use((ctx) => ctx.reply(MessageText.MailInputError));
 
   return new Scenes.WizardScene(
     SCENE_ID,
